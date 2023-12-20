@@ -7,9 +7,9 @@ def listing_files_in_folder(folder):
             print(files)
             #continue
     except FileNotFoundError:
-        print("File not found")
+         print(f"Error: Folder '{folder}' not found.")
     except PermissionError:
-        print("No permission to file")
+        print(f"Error: No permission to access files in '{folder}'.")
     
 def main():
     folders=input("Provide the list of  folders with space: ").split()
@@ -17,8 +17,8 @@ def main():
     for folder in folders:
         listing_files_in_folder(folder)
 
-main()
-
+if __name__ == "__main__":
+    main()
 
     
 
